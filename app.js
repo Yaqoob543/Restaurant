@@ -70,6 +70,7 @@ function orderNow() {
         50,
         60,
         100,
+        160
 
 
 
@@ -83,6 +84,7 @@ function orderNow() {
     document.getElementById("sub2").value;
 
     //Condtions for User
+    var flag = true;
     if (b === "main course") {
         var foodInput = prompt(
             "Please let us know what you want to order in Main Course"
@@ -91,6 +93,7 @@ function orderNow() {
         for (var i = 0; i <= food.length; i++) {
             var c = foodInput.toLowerCase();
             if (c === food[i]) {
+                flag = false;
                 document.getElementById("output").innerHTML =
                     "<b>" +
                     food[i] +
@@ -106,6 +109,16 @@ function orderNow() {
                 document.getElementById("sub2").innerHTML =
                     " In Drinks we have " + "<br>" + drinks + "<br>";
             }
+            if (b = "") {
+                if (flag !== false) {
+                    document.getElementById("output").innerHTML =
+                        "<b>" +
+                        c +
+                        " is Not Avaiable ";
+                }
+
+            }
+
         }
     }
 
