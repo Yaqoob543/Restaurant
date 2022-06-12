@@ -109,7 +109,7 @@ function orderNow() {
     var flag = true;
     if (b === "main menu") {
         var foodInput = prompt(
-            "Please let us know what you want to order in Main Course"
+            "Please let us know what you want to order in Main Menu"
         );
 
         for (var i = 0; i <= food.length; i++) {
@@ -141,7 +141,7 @@ function orderNow() {
             } else if (c != food[i]) {
 
                 document.getElementById("sub2").innerHTML =
-                    " In Main Course we have " + "<br>" + food + "<br>";
+                    " In Main Menu we have " + "<br>" + food + "<br>";
                 ("<br />");
                 document.getElementById("output").innerHTML =
                     c + " is not Available"
@@ -179,10 +179,10 @@ function orderNow() {
                     drinksPrices[i] +
                     "</b>";
                 document.getElementById("head").innerHTML =
-                    "Main Course & Sweet Also Available at our Restaurant";
+                    "Main Menu & Sweet Also Available at our Restaurant";
 
                 document.getElementById("sub2").innerHTML =
-                    " In Main Course we have " + "<br>" + food + "<br>";
+                    " In Main Menu we have " + "<br>" + food + "<br>";
                 ("<br />");
 
                 document.getElementById("sub1").innerHTML =
