@@ -7,51 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="Animations.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
+    <div class="container main-box">
 
-    <div class="main">
-        <div class="logo">
-            <img src="/Restaurant/assests/food.png" alt="">
-        </div>
-        <h1>Welcome to Darbar Restaurant</h1>
-        <div class="order">
-            <p>You can enjoy a variety of Desi Cuisines at our restaurant. What are you waiting for? <br> Head over to Darbar and satisfy your taste buds with an exceptional taste of Karachi.</p>
-        </div>
+        <div class="main">
+            <div class="logo">
+                <span><img src="/assests/food.png" alt=""></span>
+            </div>
+            <h1>
+                <span>Welcome</span>
+                <span>To</span>
+                <span>Darbar</span>
+                <span>Restaurant</span>
+            </h1>
 
-        <div class="buttons">
-            <div> <button style="font-weight: 500; color: white; " onclick="orderNow()" type="button" class="orderNow btn btn-info">Check Availability & Price of your Required Dish</button></div>
+            <div class="lineUp">
+                <div class="order">
+                    <p>You can enjoy a variety of Desi Cuisines at our restaurant. What are you waiting for? <br> Head over to Darbar and satisfy your taste buds with an exceptional taste of Karachi.</p>
+                </div>
 
+                <div class="buttons">
+                    <div> <button style="font-weight: 500; color: white; " onclick="orderNow()" type="button" class="orderNow btn btn-info">Check Availability & Price of your Required Dish</button></div>
+
+                    <br>
+
+                    <div id="output">
+
+                    </div>
+                </div>
+                <br>
+            </div>
             <br>
 
-            <div id="output">
-
+            <div id="head">
             </div>
+            <br>
+
+            <div id="sub1">
+            </div>
+            <br>
+            <br>
+
+            <div id="sub2">
+            </div>
+
+
+
+
+
+
         </div>
-        <br>
-
-        <div id="head">
-        </div>
-
-        <div id="sub1">
-        </div>
-        <br>
-        <br>
-
-        <div id="sub2">
-        </div>
-
-
-
-
-
 
     </div>
-
-
 
     <script src="app.js">
     </script>
