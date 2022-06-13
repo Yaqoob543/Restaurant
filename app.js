@@ -7,7 +7,6 @@ function orderNow() {
     );
     var b = userInput.toLowerCase();
 
-
     //Data in arrays
     var food = [
         "biryani",
@@ -58,24 +57,8 @@ function orderNow() {
         100, 500, 380, 220, 300, 280, 120, 150, 100, 150, 120, 170, 270, 140, 30,
         150, 150, 550, 750, 800, 30,
     ];
-    var drinksPrices = [
-        80,
-        60,
-        60,
-        80,
-        60,
-        50,
-        50,
-        50,
-        50,
-        60,
-        100,
-        160
-
-
-
-    ]
-
+    var drinksPrices = [80, 60, 60, 80, 60, 50, 50, 50, 50, 60, 100, 160];
+    var sweetPrices = [250, 250, 120, 500, 220, 140];
 
     //Getting Elements in DOM
     var firstInput = document.getElementById("output").value;
@@ -108,20 +91,16 @@ function orderNow() {
                 ("<br />");
                 document.getElementById("sub2").innerHTML =
                     " In Drinks we have " + "<br>" + drinks + "<br>";
+            } else if (c === "") {
+                swal("Please Type Something")
             }
-            if (b = "") {
-                if (flag !== false) {
-                    document.getElementById("output").innerHTML =
-                        "<b>" +
-                        c +
-                        " is Not Avaiable ";
-                }
-
-            }
+        }
+    } else if ((b === "")) {
+        if (flag !== false) {
+            swal("Please Type Correctly!");
 
         }
     }
-
 
     //Condition 2
     if (b === "drinks") {
@@ -143,14 +122,43 @@ function orderNow() {
 
                 document.getElementById("sub2").innerHTML =
                     " In Main Course we have " + "<br>" + food + "<br>";
-                ("<br />")
-                document.getElementById("sub2").innerHTML =
-                    " In Main Course we have " + "<br>" + food + "<br>";
-                ("<br />")
-                // document.getElementById("sub1").innerHTML =
-                //     " In Sweet Dishes we have " + "<br>" + sweet;
-                // ("<br />");
+                ("<br />");
 
+                document.getElementById("sub1").innerHTML =
+                    " In Sweet Dishes we have " + "<br>" + sweet;
+                ("<br />");
+
+            }
+        }
+    }
+
+    //3rd condition for user
+    if (b === "sweet" || b === "sweets") {
+        var foodInput = prompt(
+            "Please let us know what you want to order in Sweet"
+        );
+
+        for (var i = 0; i <= sweet.length; i++) {
+            var e = foodInput.toLowerCase();
+            if (e === sweet[i]) {
+                document.getElementById("output").innerHTML =
+                    "<b>" +
+                    sweet[i] +
+                    " is Available & It's Price is Rs. " +
+                    sweetPrices[i] +
+                    "</b>";
+                document.getElementById("head").innerHTML =
+                    "Main Course & Sweet Also Available at our Restaurant";
+
+                document.getElementById("sub2").innerHTML =
+                    "<p>"
+                " In Main Course we have " + "<br>" + food + "<br>";
+                "</p>"
+                ("<br />");
+
+                document.getElementById("sub1").innerHTML =
+                    " In Sweet Dishes we have " + "<br>" + sweet;
+                ("<br />");
             }
         }
     }
