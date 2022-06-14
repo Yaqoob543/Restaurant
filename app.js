@@ -7,6 +7,7 @@ function orderNow() {
     );
     var b = userInput.toLowerCase();
 
+
     //Data in arrays
     var food = [
         "biryani", "<br>",
@@ -105,6 +106,9 @@ function orderNow() {
     document.getElementById("head").value;
     document.getElementById("sub2").value;
 
+    if (b !== "main menu" && b !== "drink" && b !== "sweet") {
+        swal("Please Enter Category from Above List")
+    }
     //Condtions for User
     var flag = true;
     if (b === "main menu") {
@@ -158,8 +162,8 @@ function orderNow() {
     if (b === "") {
 
         swal("Please Type the Category Correctly !");
-
     }
+
 
 
     //Condition 2
